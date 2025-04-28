@@ -1,0 +1,83 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+    <!-- Top bar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/input_mass"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Hmotnost (kg)"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_main"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/input_volume"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Objem (m³)"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/input_mass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/input_density"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Hustota (kg/m³)"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/input_volume"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/button_calculate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Vypočítat"
+        app:layout_constraintTop_toBottomOf="@id/input_density"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/button_switch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Další aktivita"
+        app:layout_constraintTop_toBottomOf="@id/button_calculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Výsledek"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/button_switch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
